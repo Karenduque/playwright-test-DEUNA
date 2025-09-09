@@ -53,6 +53,7 @@ export class compraPage {
     await expect(pagarButton).toBeInViewport();
     await pagarButton.scrollIntoViewIfNeeded();
     this.page.locator(this.locators.pagarButton).click();
+    
 
   }
 

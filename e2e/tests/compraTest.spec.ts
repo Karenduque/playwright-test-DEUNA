@@ -17,9 +17,10 @@ test.describe("Automatización del Flujo de Compra", () => {
       await compra_in_page.buscarProducto();
       await compra_in_page.seleccionarProducto();
       await compra_in_page.pagarProducto();
-      await page.pause();
       test.slow();
     });
 
-
+  test.afterEach(async ({ page }) => {
+    await page.pause()
+  });
 });

@@ -1,5 +1,5 @@
 # -playwright-test-DEUNA
 Prueba Tecnica
-
-npx playwright test --reporter=html
-npx playwright show-report
+* Ejecutar un test:
+ npx playwright test --reporter=html
+ npx playwright show-report

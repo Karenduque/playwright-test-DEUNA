@@ -11,14 +11,26 @@ export default defineConfig({
   use:
   {
     headless: true,
+    trace: "on-first-retry",
+    screenshot: "only-on-failure",
+    // Timeout per action (like click) = 60 seconds
+    actionTimeout: 60 * 1000,
+    // Timeout per navigation = 300 seconds
+    navigationTimeout: 300 * 1000,
+    video: "on",
 
   },
 
 
   projects: [
     {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      name: "Desktop Chrome",
+      use: {
+        ...devices["Desktop Chrome"],
+        launchOptions: {
+          args: ["--start-maximized"],
+        },
+      },
     },
   ],
 

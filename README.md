@@ -30,5 +30,5 @@ Teh framework provides easy setup and a interactive ways to record and save auto
 1. Clone this repository
 2. Install dependencies 
 4. Run all the test:
- npx playwright test --reporter=html
- npx playwright show-report
+- npx playwright test --reporter=html
+- npx playwright show-report
